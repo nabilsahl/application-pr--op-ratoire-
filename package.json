@@ -1,0 +1,26 @@
+{
+  "name": "app-preop",
+  "version": "1.0.0",
+  "description": "Application de checklist préopératoire pour bloc opératoire (projet génie biomédical)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Pas de tests pour le moment\""
+  },
+  "keywords": [
+    "biomedical",
+    "bloc-operatoire",
+    "checklist",
+    "nodejs",
+    "application-medicale"
+  ],
+  "author": "Etudiante Génie Biomédical",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.4",
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "sqlite3": "^5.1.7"
+  }
+}

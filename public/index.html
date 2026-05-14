@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Préopératoire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= TITRE ================= -->
+    <h1>APPLICATION PRÉOPÉRATOIRE</h1>
+
+    <!-- ================= PAGE LOGIN ================= -->
+    <div id="app">
+
+        <h2>Connexion au système</h2>
+
+        <!-- Choix du rôle -->
+        <select id="role">
+            <option value="">-- Sélectionner le rôle --</option>
+            <option value="infirmier">Infirmier</option>
+            <option value="chirurgien">Chirurgien</option>
+            <option value="anesthesiste">Anesthésiste</option>
+        </select>
+
+        <!-- Identifiants -->
+        <input type="text" id="username" placeholder="Nom d'utilisateur">
+        <input type="password" id="password" placeholder="Mot de passe">
+
+        <!-- Boutons -->
+        <button onclick="login()">Se connecter</button>
+
+        <button onclick="voirHistorique()" style="background: #6c5ce7;">
+            Historique
+        </button>
+
+        <button onclick="connexion()" style="background: #d63031;">
+            Déconnexion
+        </button>
+
+        <hr>
+        <h2 id ="titre"></h2>
+        <div id ="liste"></div>
+
+        <p style="text-align:center; font-size:13px; color:gray;">
+            Système sécurisé du bloc opératoire
+        </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

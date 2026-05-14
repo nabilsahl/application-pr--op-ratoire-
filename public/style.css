@@ -1,0 +1,154 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(to bottom, #dfe9f3, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+/* ================= TABLETTE ================= */
+.app {
+    width: 400px;
+    min-height: 600px;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+    border: 3px solid #ccc;
+}
+
+/* ================= TITRE ================= */
+h1 {
+    background: linear-gradient(to right, #1e6fd9, #3a8dde);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ================= TITRE CHECKLIST ================= */
+h2 {
+    color: #1e6fd9;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* ================= INPUTS ================= */
+input[type="text"],
+input[type="password"],
+ select {
+    width: 95%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* effet focus (quand tu cliques) */
+input:focus, select:focus {
+    border-color: #1e6fd9;
+    box-shadow: 0 0 5px rgba(30,111,217,0.5);
+    outline: none;
+}
+
+/* ================= BOUTON ================= */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(to right, #00b894, #00cec9);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* effet hover */
+button:hover {
+    transform: scale(1.03);
+}
+
+/* ================= HIDDEN ================= */
+.hidden {
+    display: none;
+}
+
+/* ================= FORMULAIRE INFIRMIER ================= */
+#form-infirmier input {
+    background: #f8fbff;
+}
+
+/* ================= CHECKLIST ================= */
+.check-item {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 12px;
+    padding:10px;
+    margin: 5px 0;
+    border-radius: 12px;
+    background: #f4f8ff;
+    border: 1px solid #e0e7ff;
+}
+
+/* texte checklist */
+.check-item span {
+    font-size: 14px;
+    color: #333;
+}
+
+/* checkbox */
+.check-item input[type="checkbox"] {
+    transform: scale(1.4);
+    accent-color: green;
+    cursor: pointer;
+}
+.check-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px;
+}
+
+.check-item input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    accent-color: green;
+    flex-shrink: 0;
+}
+
+.check-item span {
+    display: inline !important;
+    margin: 0 !important;
+}
+
+/* ================= SUCCESS ================= */
+#success {
+    text-align: center;
+    padding: 20px;
+}
+
+#success h2 {
+    color: rgb(3, 141, 3);
+}
+
+/* ================= RESPONSIVE (tablette) ================= */
+@media (max-width: 500px) {
+    .app {
+        width: 95%;
+        margin: 10px;
+    }
+}
