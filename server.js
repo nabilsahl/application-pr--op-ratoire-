@@ -1,5 +1,6 @@
 const express = require("express");
-const sqlite3 = require("sqlite3").verbose();
+const Database = require("better-sqlite3");
+const db = new Database("database.db");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
@@ -10,7 +11,7 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use(express.json());
 
-const db = new sqlite3.Database("./database.db");
+
 
 // CREATE TABLE
 db.run(`
@@ -124,4 +125,9 @@ app.get("/historique", (req, res) => {
 });
 app.listen(3000, "0.0.0.0",() => {
     console.log("Serveur OK");
+});
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log("Server running on port " + PORT);
 });
