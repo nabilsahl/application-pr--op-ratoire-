@@ -14,7 +14,7 @@ app.use(express.json());
 
 
 // CREATE TABLE
-db.run(`
+db.exec(`
   CREATE TABLE IF NOT EXISTS validations (
      id INTEGER PRIMARY KEY AUTOINCREMENT,
      role TEXT,
@@ -81,7 +81,7 @@ console.log("traitement =", data.traitement);
 
     const date = new Date().toLocaleString();
 
-    db.run(`
+    db.exec(`
         INSERT INTO validations (role, nom, date, checklist)
          VALUES (?, ?, ?, ?)`,
         [role, nom, date, JSON.stringify(checklist)],
